@@ -33,38 +33,8 @@ def main():
 #               function.
 #################################################################################################
 def userInput():
-    
-    while True:
-        year = input("Enter the year of birth or to press 'enter' to exit: ")
-        if (not year):
-            exit()
-             
-        try:
-            year = int(year)
-            
-        except ValueError:
-            print("Error: Invalid Input")
-            continue
-
-        if 1900 <= year <= 2020:
-            break
-
-        else:
-            print("Error: The input must between 1900 and 2020.")
-            continue
-
-    while True:
-        try:
-            month = int(input("Enter the month of birth: "))
-
-            if month not in range(1, 13):
-                raise ValueError
-
-            break
-
-        except ValueError:
-            print("Error: Invalid month.")
-            
+    year = int(input("Enter the year of birth or to press 'enter' to exit: "))
+    month = int(input("Enter the month of birth: "))
     return year, month
 
 # Function: retirementAge
